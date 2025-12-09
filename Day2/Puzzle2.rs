@@ -23,6 +23,8 @@ fn main() {
         });
     }
 
+    // Loops through each number in each possible range, and performs an expanding search for
+    // numbers with repeating digits (i.e. 111, 2020, 464464)
     for range in ranges {
         println!("{:#?}", range);
 

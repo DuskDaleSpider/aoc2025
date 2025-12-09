@@ -23,7 +23,8 @@ fn main() {
             end: input_range[dash_index+1..].parse::<i64>().unwrap()
         });
     }
-
+ 
+    //Loops through each number in a range, cuts the string in half if possible and compares the two sides
     for range in ranges {
         println!("{:#?}", range);
 
