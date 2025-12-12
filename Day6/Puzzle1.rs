@@ -5,6 +5,7 @@ fn main() {
 
     let input = fs::read_to_string(file_path).expect("Should have been able to read the file");
     
+    //parse each number by row and column
     let lines: Vec<&str> = input.trim().split("\n").collect();    
     let numbers: Vec<Vec<i64>> = {
         let mut temp: Vec<Vec<i64>> = Vec::new();
@@ -27,6 +28,7 @@ fn main() {
     //println!("{:#?}", numbers); 
     //println!("{:#?}", operations);
 
+    //loop over each number column, then loop over rows and calculate total
     for i in 0..operations.len() {
         let mut running_total = 0;
         for (j, group) in numbers.clone().into_iter().enumerate() {
